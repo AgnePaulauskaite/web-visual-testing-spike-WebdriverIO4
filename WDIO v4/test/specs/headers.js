@@ -14,12 +14,8 @@ describe ('homepage', function () {
 
     it ('Related articles should look the same', function () {
        let report = browser.checkElement('.related-articles')
-       });
+       
 
        comparisonOfScreenShoots(report);
-
-
     });
-
-
 });
