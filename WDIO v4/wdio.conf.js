@@ -97,7 +97,7 @@ exports.config = {
     baseUrl: 'https://economist.com',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 36000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response
@@ -138,7 +138,8 @@ exports.config = {
           misMatchTolerance: 3,
         }),
         viewportChangePause: 300,
-        viewports: [{ width: 1280, height: 1024 },{ width: 360, height: 600 }],
+        viewports: { width: 1280, height: 1024 },
+          //[{ width: 360, height: 600 }],
         orientations: ['landscape'],
       },
     //, { width: 600, height: 900 }, 
