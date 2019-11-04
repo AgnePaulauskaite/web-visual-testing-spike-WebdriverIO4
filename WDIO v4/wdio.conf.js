@@ -97,14 +97,14 @@ exports.config = {
     baseUrl: 'https://economist.com',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 36000,
+    waitforTimeout: 60000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response
-    connectionRetryTimeout: 90000,
+    connectionRetryTimeout: 10000,
     //
     // Default request retries count
-    connectionRetryCount: 3,
+    connectionRetryCount: 5,
     //
     // Initialize the browser instance with a WebdriverIO plugin. The object should have the
     // plugin name as key and the desired plugin options as properties. Make sure you have
@@ -150,6 +150,10 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
+    mochaOpts: {
+      timeout: 20000
+  },
+
     //
     // Test reporter for stdout.
     // The only one supported by default is 'dot'

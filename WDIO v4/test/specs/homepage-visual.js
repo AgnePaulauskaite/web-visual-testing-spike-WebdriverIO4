@@ -48,12 +48,14 @@ describe ('homepage', function () {
     //   });
 
     it ('homepage', function () {
-      browser.pause(300);
-      let result = browser.checkDocument([{
-       name: "checkPublisherPage",
-       hide: browser.element('.layout-news-analysis')
-    }]);
-    isWithinMisMatchTolerance(report);
+      browser.pause(100);
+      let report = browser.checkDocument([{
+       hide: browser.element('#google_image_div')
+      }]);
+       isWithinMisMatchTolerance(report);
+    
+    
     });
 
   });
+
