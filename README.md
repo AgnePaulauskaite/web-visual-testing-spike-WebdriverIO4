@@ -14,7 +14,7 @@ To run Applitoos, do the following:
  
  `npx wdio`
 
-To set up applitools account and follow further instructions read `Applitools v4/README.md`
+To set up applitools account and follow further instructions go to `Applitools v4/README.md`
 
 -------------------------------------------------------------------------------------------------------------------------------
 
@@ -27,4 +27,4 @@ To run wdio-visual-regression-service, do the following:
  `npx run test`
  
  
- To undestand the screenshot feature and follow further instructions read `WDIO v4/README.md`
+ To undestand the screenshot feature and follow further instructions go to `WDIO v4/README.md`
