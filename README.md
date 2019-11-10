@@ -12,7 +12,7 @@ This repo was created with the purpose of trying out several tools/services for 
  `npx wdio`
  ```
 
-* To set up applitools account, following the instructions in **Applitools v4** folder > README.md
+* To set up applitools account, follow the instructions in Applitools v4/README.md
 
 *To run wdio-visual-regression-service, do the following:*
 ```
@@ -22,3 +22,6 @@ This repo was created with the purpose of trying out several tools/services for 
 
  `npx run test`
  ```
+ WDIO v4/README.md
+
+ To undestand the screenshot feature, follow the instructions in WDIO v4/README.md
