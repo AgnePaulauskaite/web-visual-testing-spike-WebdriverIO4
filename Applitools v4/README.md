@@ -26,8 +26,8 @@ The homepage test has been set up to check the layout which should ignore dynami
 2 - The second time you run, it checks against the baseline
 
 3 - Please note that most of the time tests will identify differences due to interactive ads, as
-different size ad can be loaded. but we can simply inspect the difference and accept it as our new baseline
+different size ads can be loaded. but we can simply inspect the difference and accept it as our new baseline
 
 5 - Log into Applitools and check the last run test in dashboard
 
-It this specific example it uses Mocha test framework
+Note, this specific example it uses Mocha test framework
