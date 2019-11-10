@@ -9,7 +9,7 @@ The homepage test has been set up to check the layout which should ignore dynami
 
 ***Setting up Applitools and API***
 
-1 - To see the task manager you need to register with applitools. https://applitools.com/
+1 - To see tests in task manager you need to register with applitools. https://applitools.com/
 
 2 - Obtain your API key (Click on the main menu icon at the top right of the window and choose the "My API Key" option)
 
@@ -19,7 +19,7 @@ The homepage test has been set up to check the layout which should ignore dynami
 -  add this `export APPLITOOLS_API_KEY=replace_with_your_api_key`
 - `source ~/.bash_profile` 
 
-***How to use use Applitools Dashbord?***
+***How to use Applitools Dashbord?***
 
 1 - The first time you run, it saves the screenshot as the baseline
 
@@ -29,3 +29,5 @@ The homepage test has been set up to check the layout which should ignore dynami
 different size ad can be loaded. but we can simply inspect the difference and accept it as our new baseline
 
 5 - Log into Applitools and check the last run test in dashboard
+
+It this specific example it uses Mocha test framework
