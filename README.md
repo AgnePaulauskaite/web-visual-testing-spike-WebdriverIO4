@@ -1,4 +1,4 @@
-This repo was created in the purpose of trying out several tools/services for web visual testing. The following tools/services are compatible with WebdriverIO v4.
+This repo was created with the purpose of trying out several tools/services for web visual testing. The following tools/services are compatible with WebdriverIO v4.
 
 - Applitools
 - wdio-visual-regression-service
