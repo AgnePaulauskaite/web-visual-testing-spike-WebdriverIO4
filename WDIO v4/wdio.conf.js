@@ -2,16 +2,18 @@ var path = require('path');
 var VisualRegressionCompare = require('wdio-visual-regression-service/compare');
 
 function getScreenshotName(basePath) {
-  return function(context) {
-    var type = context.type;
-    var testName = context.test.title;
-    var browserVersion = parseInt(context.browser.version, 10);
-    var browserName = context.browser.name;
-    var browserWidth = context.meta.width;
-
-    return path.join(basePath, `${testName}_${type}_${browserName}_v${browserVersion}_${browserWidth}.png`);
-  };
-}
+    return function(context) {
+      var type = context.type;
+      var testName = context.test.title;
+      var browserVersion = parseInt(context.browser.version, 10);
+      var browserName = context.browser.name;
+      var browserViewport = context.meta.viewport;
+      var browserWidth = browserViewport.width;
+      var browserHeight = browserViewport.height;
+  
+      return path.join(basePath, `${testName}_${type}_${browserName}_v${browserVersion}_${browserWidth}x${browserHeight}.png`);
+    };
+  }
 
 exports.config = {
     
@@ -95,14 +97,14 @@ exports.config = {
     baseUrl: 'https://economist.com',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 60000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response
-    connectionRetryTimeout: 90000,
+    connectionRetryTimeout: 10000,
     //
     // Default request retries count
-    connectionRetryCount: 3,
+    connectionRetryCount: 5,
     //
     // Initialize the browser instance with a WebdriverIO plugin. The object should have the
     // plugin name as key and the desired plugin options as properties. Make sure you have
@@ -133,13 +135,14 @@ exports.config = {
           referenceName: getScreenshotName(path.join(process.cwd(), 'screenshots/reference')),
           screenshotName: getScreenshotName(path.join(process.cwd(), 'screenshots/screen')),
           diffName: getScreenshotName(path.join(process.cwd(), 'screenshots/diff')),
-          misMatchTolerance: 0.01,
+          misMatchTolerance: 3,
         }),
-        viewportChangePause: 100,
-        widths: [1024],
+        viewportChangePause: 300,
+        viewports: { width: 1280, height: 1024 },
+          //[{ width: 360, height: 600 }],
         orientations: ['landscape'],
       },
-    //
+    //, { width: 600, height: 900 }, 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: http://webdriver.io/guide/testrunner/frameworks.html
@@ -147,6 +150,10 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
+    mochaOpts: {
+      timeout: 20000
+  },
+
     //
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
