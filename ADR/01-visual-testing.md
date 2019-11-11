@@ -51,9 +51,7 @@ Bad:
 
 #Conlusion
 
-
-
-Both tools Applitoos and wdio-visual-regression-service are good candidates for visual testing. However, it became apparent that WebdriverIO4 should be first upgraded to v5 before we carry on further investigation. 
+Both Applitoos and wdio-visual-regression-service are good candidates for web visual testing. However, it became apparent that WebdriverIO4 should be first upgraded to v5 before we carry on further investigation. 
 
 #Next steps
 
